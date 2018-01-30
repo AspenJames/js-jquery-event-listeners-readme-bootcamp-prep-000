@@ -19,8 +19,8 @@ function frameIt(){
 }
 
 function pressIt(){
-  $("#typing").on("keypress", function(e){
-    if(parseInt(e.detail || e.which) == 71){
+  $("#typing").on("keydown", function(e){
+    if(parseInt(e.which) == 71){
       alert("You have pressed G.");
     }
   })
