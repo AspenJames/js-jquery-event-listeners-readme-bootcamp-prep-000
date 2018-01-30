@@ -1,10 +1,10 @@
 //define functions here
 
 $(document).ready(function(){
-getIt()
-frameIt()
-
-
+getIt();
+frameIt();
+pressIt();
+submitIt();
 });
 function getIt(){
   $('p').on('click', function(){
@@ -15,5 +15,19 @@ function getIt(){
 function frameIt(){
   $("img").on("load", function(){
     $("img").addClass("tasty");
+  })
+}
+
+function pressIt(){
+  $("#typing").on("keypress", function(e){
+    if(e.which == 71){
+      alert("You have pressed G.");
+    }
+  })
+}
+
+function submitIt(){
+  $("input").on("submit", function(){
+    alert("Your form is going to be submitted now.");
   })
 }
