@@ -20,7 +20,7 @@ function frameIt(){
 
 function pressIt(){
   $("#typing").on("keypress", function(e){
-    if(parseInt(e.which) == 71){
+    if(parseInt(e.detail || e.which) == 71){
       alert("You have pressed G.");
     }
   })
